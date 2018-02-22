@@ -1,0 +1,281 @@
+:root {
+  --iphone-screens: 7;
+  /*  filter: brightness(100%);
+  background-color: var(--my-bg-color);*/
+}
+
+body {
+  font-family: arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: #f8f8f8;
+  padding: 0;
+  margin: 0;
+}
+
+/* -Global- Whole Page */
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.button_1 {
+  height: 38px;
+  background: #e8491d;
+  border:0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+
+}
+
+/* Header Specific CSS */
+
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background: #fafafa;
+  color: #282828;
+  padding-top: 30px;
+  min-height:70px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header a {
+  color: #282828;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+
+header li {
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+#branding {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+#branding h1 {
+  margin: 0 ;
+}
+
+#branding img {
+  width: 35px;
+  padding: 10px;
+}
+
+
+
+header a:hover {
+  font-weight: bold;
+}
+
+/*Showcase Section*/
+#showcase {
+  min-height: 400px;
+  text-align: center;
+  align-items: center;
+}
+
+#showcase .container {
+    margin-top: 70px;
+}
+
+#showcase h1{
+  font-size: 55px;
+  margin: 0 0 10px 0;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+/*Newsletter Section*/
+#newsletter{
+  padding: 15px;
+}
+
+#newsletter h1{
+  float: left;
+}
+
+#newsletter form{
+  float: right;
+  margin-top: 20px;
+}
+
+#newsletter input[type="email"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+/* mockup Section */
+
+#mockup .container {
+  max-width: 1600px;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+
+#mockup .iphone {
+  /*min-width: 250px;*/
+  max-width: 250px;
+  width: calc(76% / 5 );
+  text-align: center;
+  padding: 3% 20px;
+  display:inline-block;
+}
+
+#mockup .parts {
+  position: relative;
+}
+
+
+#mockup .parts img {
+  width: 100%;
+}
+
+#mockup .screen {
+  z-index: -10;
+  position: absolute;
+  width: 87% !important;
+  top: 11.95%;
+  left: 6.55%;
+}
+
+/* Boxes Section */
+
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  text-align: center;
+  width: 33%;
+  padding: 0px;
+}
+
+#boxes .box img {
+  width: 90px;
+}
+
+/* team Section */
+
+#team {
+  margin-top: 20px;
+}
+
+#team .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#team .box {
+  float: left;
+  text-align: center;
+  width: 20%;
+  max-width: 215px;
+  padding: 0px;
+}
+
+#team .square {
+  /* crop the image and make it a square*/
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#team .border {
+  /* give it a border */
+  border-radius: 10000px; /* makes it a circle */
+  border-color: white;
+  border-width: 5px;
+  border-style: solid;
+  box-shadow: 0 5px 20px 0px rgba(0,0,0, 0.2);
+}
+
+#team .box img {
+  position: absolute;
+  height: 100%;
+  /*objwct-fit: cover;*/
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  padding: 20px;
+  margin-top: 20px;
+  color: #282828;
+  background-color: #fafafa;
+}
+footer img {
+  border-radius: 50%;
+  width: 100px;
+  display: block;
+}
+
+footer p {
+  margin-top: 50px ;
+  display: block;
+}
+
+.lemmings-highlight {
+  text-shadow:
+  0px 1px 0.5px rgb(255, 255, 0),
+  1px -1px 0.5px rgb(0, 255, 255),
+ -1px 1px 0.5px rgb(255, 0, 255);
+}
+
+/*media queries */
+@media ( max-width: 768px) {
+  body {
+      zoom: 100%;
+  }
+  #mockup .iphone {
+
+    width: calc(76% / 2 );
+    text-align: center;
+    padding: 3% 0;
+    display:inline-block;
+  }
+
+
+}
